@@ -49,9 +49,47 @@
       </section>
 
       <section id="contacte">
-        <h2>Contacto</h2>
-        <p>Próximamente añadiré mis datos de contacto.</p>
-      </section>
+  <h2>Contacto</h2>
+
+  <p>
+    ¿Tienes alguna pregunta o propuesta? Puedes contactar conmigo
+    mediante el siguiente formulario.
+  </p>
+
+  <form>
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        required
+      >
+    </div>
+
+    <div>
+      <label for="email">Correo electrónico:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+      >
+    </div>
+
+    <div>
+      <label for="mensaje">Mensaje:</label>
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        rows="5"
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit">Enviar mensaje</button>
+  </form>
+</section>
     </main>
   </body>
 </html>
