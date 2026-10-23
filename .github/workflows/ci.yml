@@ -16,7 +16,7 @@ steps:
 - name: Descargar el repositorio
 uses: actions/checkout@v4
 
-```
+
   - name: Preparar Node
     uses: actions/setup-node@v4
     with:
@@ -24,7 +24,7 @@ uses: actions/checkout@v4
 
   - name: Validar el HTML
     run: npx --yes html-validate@9 "**/*.html"
-```
+
 
 enlaces:
 name: Enlaces vivos
@@ -33,12 +33,12 @@ steps:
 - name: Descargar el repositorio
 uses: actions/checkout@v4
 
-```
+
   - name: Comprobar enlaces
     uses: lycheeverse/lychee-action@v2
     with:
       args: --verbose --no-progress './**/*.html'
-```
+
 
 formato:
 name: Formato
@@ -47,7 +47,7 @@ steps:
 - name: Descargar el repositorio
 uses: actions/checkout@v4
 
-```
+
   - name: Preparar Node
     uses: actions/setup-node@v4
     with:
@@ -55,7 +55,7 @@ uses: actions/checkout@v4
 
   - name: Comprobar formato
     run: npx --yes prettier@3 --check "**/*.{html,css,js,json,md}"
-```
+
 
 calidad:
 name: Presupuesto de calidad
@@ -64,7 +64,7 @@ steps:
 - name: Descargar el repositorio
 uses: actions/checkout@v4
 
-```
+
   - name: Preparar Node
     uses: actions/setup-node@v4
     with:
@@ -75,6 +75,6 @@ uses: actions/checkout@v4
 
   - name: Analizar calidad
     run: lhci autorun
-```
+
 
 
