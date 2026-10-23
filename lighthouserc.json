@@ -1,39 +1,39 @@
 {
-"ci": {
-"collect": {
-"staticDistDir": ".",
-"numberOfRuns": 1
-},
-"assert": {
-"assertions": {
-"categories": [
-"error",
-{
-"minScore": 0.8
-}
-],
-"categories": [
-"error",
-{
-"minScore": 0.9
-}
-],
-"categories": [
-"error",
-{
-"minScore": 0.9
-}
-],
-"categories": [
-"error",
-{
-"minScore": 0.9
-}
-]
-}
-},
-"upload": {
-"target": "temporary-public-storage"
-}
-}
+  "ci": {
+    "collect": {
+      "staticDistDir": ".",
+      "numberOfRuns": 1
+    },
+    "assert": {
+      "assertions": {
+        "categories": [
+          "error",
+          {
+            "minScore": 0.8
+          }
+        ],
+        "categories": [
+          "error",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "categories": [
+          "error",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "categories": [
+          "error",
+          {
+            "minScore": 0.9
+          }
+        ]
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
 }

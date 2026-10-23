@@ -1,82 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio de Ferran Abad</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1>Ferran Abad</h1>
 
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#projectes">Proyectos</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#contacte">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <nav aria-label="Navegación principal">
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#projectes">Proyectos</a></li>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#contacte">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+    <main>
+      <section id="inicio">
+        <h2>Inicio</h2>
+        <p>
+          Documento inicial para verificar la automatización del despliegue
+          continuo de Ferran Abad.
+        </p>
+      </section>
 
-<main>
-  <section id="inicio">
-    <h2>Inicio</h2>
-    <p>
-      Documento inicial para verificar la automatización del despliegue
-      continuo de Ferran Abad.
-    </p>
-  </section>
+      <section id="projectes">
+        <h2>Mis proyectos</h2>
 
-  <section id="projectes">
-    <h2>Mis proyectos</h2>
+        <article>
+          <h3>Gestor de tareas</h3>
+          <p>
+            Aplicación para gestionar tareas y proyectos, desarrollada como
+            parte de mi aprendizaje.
+          </p>
+        </article>
+      </section>
 
-    <article>
-      <h3>Gestor de tareas</h3>
-      <p>
-        Aplicación para gestionar tareas y proyectos, desarrollada como
-        parte de mi aprendizaje.
-      </p>
-    </article>
-  </section>
+      <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>Estudiante de Desarrollo de Aplicaciones Web.</p>
+      </section>
 
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Estudiante de Desarrollo de Aplicaciones Web.</p>
-  </section>
+      <section id="contacte">
+        <h2>Contacto</h2>
+        <p>
+          ¿Tienes alguna pregunta o propuesta? Puedes contactar conmigo mediante
+          el siguiente formulario.
+        </p>
 
-  <section id="contacte">
-    <h2>Contacto</h2>
-    <p>
-      ¿Tienes alguna pregunta o propuesta? Puedes contactar conmigo mediante
-      el siguiente formulario.
-    </p>
+        <form>
+          <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
 
-    <form>
-      <div>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-      </div>
+          <div>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
 
-      <div>
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
+          <div>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
 
-      <div>
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-      </div>
-
-      <button type="submit">Enviar mensaje</button>
-    </form>
-  </section>
-</main>
-
-
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
-
