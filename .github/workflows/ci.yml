@@ -67,7 +67,15 @@ uses: actions/checkout@v4
   - name: Instalar Lighthouse CI
     run: npm install -g @lhci/cli@0.15.x
 
+  - name: Iniciar servidor web
+    run: |
+      python3 -m http.server 8080 &
+      for i in {1..10}; do
+        if curl --silent --fail http://localhost:8080/ > /dev/null; then
+          break
+        fi
+        sleep 1
+      done
+
   - name: Analizar calidad
     run: lhci autorun
-
-
