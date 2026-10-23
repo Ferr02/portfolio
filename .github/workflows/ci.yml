@@ -79,3 +79,5 @@ uses: actions/checkout@v4
 
   - name: Analizar calidad
     run: lhci autorun
+
+    # Aquesta línia és un comentari
