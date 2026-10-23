@@ -51,3 +51,23 @@ jobs:
       - name: Comprobar formato
         run: npx --yes prettier@3 --check "**/*.{HTML,css,js,json,md}"
 
+
+  lighthouse:
+    name: Qualitat Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descarregar el repositori
+        uses: actions/checkout@v4
+
+      - name: Preparar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Instal·lar Lighthouse CI
+        run: npm install -g @lhci/cli@0.15.x
+
+      - name: Analitzar la pàgina
+        run: lhci autorun
+
+#holas
