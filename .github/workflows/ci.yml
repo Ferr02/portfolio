@@ -1,53 +1,80 @@
 name: CI
 
 on:
-  pull_request:
-  push:
-    branches: [main]
+pull_request:
+push:
+branches: [main]
 
 permissions:
-  contents: read
+contents: read
 
 jobs:
-  html:
-    name: HTML válido
-    runs-on: ubuntu-latest
-    steps:
-      - name: Descargar el repositorio
-        uses: actions/checkout@v4
+html:
+name: HTML válido
+runs-on: ubuntu-latest
+steps:
+- name: Descargar el repositorio
+uses: actions/checkout@v4
 
-      - name: Preparar Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
+```
+  - name: Preparar Node
+    uses: actions/setup-node@v4
+    with:
+      node-version: 24
 
-      - name: Validar el HTML
-        run: npx --yes html-validate@9 "**/*.html"
+  - name: Validar el HTML
+    run: npx --yes html-validate@9 "**/*.html"
+```
 
-  enlaces:
-    name: Enlaces vivos
-    runs-on: ubuntu-latest
-    steps:
-      - name: Descargar el repositorio
-        uses: actions/checkout@v4
+enlaces:
+name: Enlaces vivos
+runs-on: ubuntu-latest
+steps:
+- name: Descargar el repositorio
+uses: actions/checkout@v4
 
-      - name: Comprobar enlaces
-        uses: lycheeverse/lychee-action@v2
-        with:
-          args: --verbose --no-progress './**/*.html'
+```
+  - name: Comprobar enlaces
+    uses: lycheeverse/lychee-action@v2
+    with:
+      args: --verbose --no-progress './**/*.html'
+```
 
-  formato:
-    name: Formato
-    runs-on: ubuntu-latest
-    steps:
-      - name: Descargar el repositorio
-        uses: actions/checkout@v4
+formato:
+name: Formato
+runs-on: ubuntu-latest
+steps:
+- name: Descargar el repositorio
+uses: actions/checkout@v4
 
-      - name: Preparar Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
+```
+  - name: Preparar Node
+    uses: actions/setup-node@v4
+    with:
+      node-version: 24
 
-      - name: Comprobar formato
-        run: npx --yes prettier@3 --check "**/*.{HTML,css,js,json,md}"
+  - name: Comprobar formato
+    run: npx --yes prettier@3 --check "**/*.{html,css,js,json,md}"
+```
+
+calidad:
+name: Presupuesto de calidad
+runs-on: ubuntu-latest
+steps:
+- name: Descargar el repositorio
+uses: actions/checkout@v4
+
+```
+  - name: Preparar Node
+    uses: actions/setup-node@v4
+    with:
+      node-version: 24
+
+  - name: Instalar Lighthouse CI
+    run: npm install -g @lhci/cli@0.15.x
+
+  - name: Analizar calidad
+    run: lhci autorun
+```
+
 
