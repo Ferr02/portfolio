@@ -1,0 +1,164 @@
+/* Configuració general */
+
+* html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #eeeeee;
+  background-color: #181818;
+}
+
+/* Capçalera */
+
+header {
+  padding: 24px 5%;
+  background-color: #252525;
+  border-bottom: 2px solid #b54a36;
+}
+
+header h1 {
+  margin: 0 0 16px;
+  font-size: 2rem;
+}
+
+/* Navegació */
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: #eeeeee;
+  text-decoration: none;
+}
+
+nav a,
+nav a {
+  color: #ff8068;
+  text-decoration: underline;
+}
+
+/* Contingut principal */
+
+main {
+  width: min(100% - 40px, 900px);
+  margin: 32px auto;
+}
+
+section {
+  margin-bottom: 32px;
+  padding: 24px;
+  background-color: #252525;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+section h2 {
+  margin-top: 0;
+  color: #ff8068;
+}
+
+article {
+  padding: 16px;
+  background-color: #303030;
+  border-left: 3px solid #b54a36;
+  border-radius: 4px;
+}
+
+/* Formulari de contacte */
+
+form {
+  display: grid;
+  gap: 18px;
+}
+
+form div {
+  display: grid;
+  gap: 6px;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  border-radius: 4px;
+}
+
+input,
+textarea {
+  color: #eeeeee;
+  background-color: #181818;
+  border: 1px solid #666666;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input,
+textarea {
+  outline: 2px solid #ff8068;
+  outline-offset: 2px;
+}
+
+button {
+  color: #ffffff;
+  background-color: #a83f2c;
+  border: none;
+  cursor: pointer;
+}
+
+button {
+  background-color: #c7523b;
+}
+
+/* Adaptació a mòbils */
+
+@media (max-width: 600px) {
+  header {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 4px 0;
+  }
+
+  main {
+    width: calc(100% - 24px);
+    margin: 20px auto;
+  }
+
+  section {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  article {
+    padding: 12px;
+  }
+
+  button {
+    min-height: 48px;
+  }
+}
